@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <style>
+    main {
+      padding: 10px 50px;
+      display: flex;
+      justify-content: space-between;
+    }
+    h2 {
+      margin-top: 30px;
+    }
+    ol {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    @media screen and (max-width: 500px) {
+      main {
+        padding: 0;
+        flex-direction: column;
+      }
+    }
+  </style>
+  <body>
+    <main>
+      <div style="max-width: 500px">
+        <h1>Notion Share Widget</h1>
+        <br>
+        <h2>Technology used</h2>
+        <ol>
+          <li>
+            Made this using <a href="https://vitejs.dev/guide/#trying-vite-online">Vite along with React JS</a> framework.</li>
+          <li>
+            For CSS, I've used the combination of <a target="_blank" href="https://acss.io">Atomic CSS</a> and plain old CSS.
+          </li>
+        </ol>
+        <h2>Known Issues</h2>
+        <ol>
+          <li> If I click on the dropdown (can edit) inside of the InviteByEmail screen, the "select a person" view also triggers. <br>
+          The reason it's happening is because I've added an event listerner on document to close the "select a person"  view or "dropdown" view when click outside.
+          </li>
+          <li>
+            Right now, the tooltip positioning is not calculated dynamically.
+          </li>
+        </ol>
+        <h2>Scope of Improvements</h2>
+        <ol>
+          <li>NotionWidget component: This is the main parent component where all the data/states hold. Might need refactoring in this component.</li>
+          <li>Some colors have same hex value, but is differentiated using it's alpha(opaque) value. Could've used SaaS to make a mixin for that </li>
+        </ol>
+        
+      </div>
+
+
+
+      <div id="root"></div>
+    </main>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
